@@ -1,0 +1,605 @@
+".source.lua":
+	RunScript:
+		prefix: "LoadScript"
+		body: ["LoadScript( scriptFile )"]
+		description: "Loads script from file."
+	UnloadScript:
+		prefix: "UnloadScript"
+		body: [
+			"UnloadScript( scriptFile )"
+		]
+		description: "Unloads script by name."
+	GetScriptName:
+		prefix: "GetScriptName"
+		body: [
+			"GetScriptName()"
+		]
+		description: "Returns current script name."
+	"entities.FindByClass":
+		prefix: "entities.FindByClass"
+		body: [
+			"entities.FindByClass( className )"
+		]
+		description: "Find and put into table all entities with given class name."
+	"entities.GetLocalPlayer":
+		prefix: "entities.GetLocalPlayer"
+		body: [
+			"entities.GetLocalPlayer()"
+		]
+		description: "Return local player entity."
+	"entities.GetByIndex":
+		prefix: "entities.GetByIndex"
+		body: [
+			"entities.GetByIndex( index )"
+		]
+		description: "Return entity by index."
+	"entities.GetByUserID":
+		prefix: "entities.GetByUserID"
+		body: [
+			"entities.GetByUserID( userID )"
+		]
+		description: "Return entity by user id."
+	"entities.GetPlayerResources":
+		prefix: "entities.GetPlayerResources"
+		body: [
+			"entities.GetPlayerResources()"
+		]
+		description: "Return player resources entity."
+	"client.WorldToScreen":
+		prefix: "client.WorldToScreen"
+		body: [
+			"client.WorldToScreen( Vector3 )"
+		]
+		description: "Translate world position into screen position (x,y)"
+	"client.Command":
+		prefix: "client.Command"
+		body: [
+			"client.Command( cmd, unrestrict )"
+		]
+		description: "Run command in game console."
+	"client.ChatSay":
+		prefix: "client.ChatSay"
+		body: [
+			"client.ChatSay( msg )"
+		]
+		description: "Say text in chat."
+	"client.ChatTeamSay":
+		prefix: "client.ChatTeamSay"
+		body: [
+			"client.ChatTeamSay( msg )"
+		]
+		description: "Say text in team chat."
+	"client.AllowListener":
+		prefix: "client.AllowListener"
+		body: [
+			"client.AllowListener( eventName )"
+		]
+		description: "Request sending given game event from server."
+	"client.GetPlayerNameByIndex":
+		prefix: "client.GetPlayerNameByIndex"
+		body: [
+			"client.GetPlayerNameByIndex( index )"
+		]
+		description: "Return player name by index."
+	"client.GetPlayerNameByUserID":
+		prefix: "client.GetPlayerNameByUserID"
+		body: [
+			"client.GetPlayerNameByUserID( userID )"
+		]
+		description: "Return player name by user id."
+	"client.GetPlayerInfo":
+		prefix: "client.GetPlayerInfo"
+		body: [
+			"client.GetPlayerInfo( index )"
+		]
+		description: "Returns a table with Name, UserID, SteamID, IsBot and IsGOTV."
+	"client.GetLocalPlayerIndex":
+		prefix: "client.GetLocalPlayerIndex"
+		body: [
+			"client.GetLocalPlayerIndex()"
+		]
+		description: "Return local player index."
+	"client.SetConVar":
+		prefix: "client.SetConVar"
+		body: [
+			"client.GetConVar( name, value, unrestrict )"
+		]
+		description: "Set game convar."
+	"client.GetConVar":
+		prefix: "client.GetConVar"
+		body: [
+			"client.SetConVar( name )"
+		]
+		description: "Get game convar."
+	"globals.TickInterval":
+		prefix: "globals.TickInterval"
+		body: [
+			"globals.TickInterval()"
+		]
+		description: "Return server tick interval."
+	"globals.TickCount":
+		prefix: "globals.TickCount"
+		body: [
+			"globals.TickCount()"
+		]
+		description: "Return client tick count."
+	"globals.RealTime":
+		prefix: "globals.RealTime"
+		body: [
+			"globals.RealTime()"
+		]
+		description: "Return time since start of the game."
+	"globals.CurTime":
+		prefix: "globals.CurTime"
+		body: [
+			"globals.CurTime()"
+		]
+		description: "Return current time."
+	"globals.FrameCount":
+		prefix: "globals.FrameCount"
+		body: [
+			"globals.FrameCount()"
+		]
+		description: "Return frame count."
+	"globals.FrameTime":
+		prefix: "globals.FrameTime"
+		body: [
+			"globals.FrameTime()"
+		]
+		description: "Return delta time between frames. (note: possibility to return tick interval)"
+	"globals.AbsoluteFrameTime":
+		prefix: "globals.AbsoluteFrameTime"
+		body: [
+			"globals.AbsoluteFrameTime()"
+		]
+		description: "Return delta time between frames."
+	"globals.MaxClients":
+		prefix: "globals.MaxClients"
+		body: [
+			"globals.MaxClients()"
+		]
+		description: "Max player count."
+	"callbacks.Register":
+		prefix: "callbacks.Register"
+		body: [
+			"callbacks.Register( id, function )"
+		]
+		description: "Register new callback."
+	"callbacks.URegister":
+		prefix: "callbacks.Register"
+		body: [
+			"callbacks.Register( id, unique, function )"
+		]
+		description: "Register new callback with unique string Which allows to unregister it at any time."
+	"callbacks.Unregister":
+		prefix: "callbacks.Unregister"
+		body: [
+			"callbacks.Unregister( id, unique )"
+		]
+		description: "Unregister callback."
+	"draw.Color":
+		prefix: "draw.Color"
+		body: [
+			"draw.Color( r, g, b, a )"
+		]
+		description: "Set color for drawing shapes and texts."
+	"draw.Line":
+		prefix: "draw.Line"
+		body: [
+			"draw.Line( x1, y1, x2, y2 )"
+		]
+		description: "Draw line from x1, y1 to x2, y2."
+	"draw.FilledRect":
+		prefix: "draw.FilledRect"
+		body: [
+			"draw.FilledRect( x1, y1, x2, y2 )"
+		]
+		description: "Draw filled rectangle with top left point at x1, y1 and bottom right point at x2, y2."
+	"draw.OutlinedRect":
+		prefix: "draw.OutlinedRect"
+		body: [
+			"draw.OutlinedRect( x1, y1, x2, y2 )"
+		]
+		description: "Draw outlined rectangle with top left point at x1, y1 and bottom right point at x2, y2."
+	"draw.RoundedRect":
+		prefix: "draw.RoundedRect"
+		body: [
+			"draw.RoundedRect( x1, y1, x2, y2 )"
+		]
+		description: "Draw rounded rectangle with top left point at x1, y1 and bottom right point at x2, y2."
+	"draw.RoundedRectFill":
+		prefix: "draw.RoundedRectFill"
+		body: [
+			"draw.RoundedRectFill( x1, y1, x2, y2 )"
+		]
+		description: "Draw rounded and filled rectangle with top left point at x1, y1 and bottom right point at x2, y2."
+	"draw.Triangle":
+		prefix: "draw.Triangle"
+		body: [
+			"draw.Triangle( x1, y1, x2, y2, x3, y3 )"
+		]
+		description: "Draw filled triangle."
+	"draw.GetTextSize":
+		prefix: "draw.GetTextSize"
+		body: [
+			"draw.GetTextSize( string )"
+		]
+		description: "Get text size with current font. returns: width, height"
+	"draw.Text":
+		prefix: "draw.Text"
+		body: [
+			"draw.Text( x, y, string )"
+		]
+		description: "Draw text at x, y"
+	"draw.TextShadow":
+		prefix: "draw.TextShadow"
+		body: [
+			"draw.TextShadow( x, y, string )"
+		]
+		description: "Draw text with shadow at x, y"
+	"draw.GetScreenSize":
+		prefix: "draw.GetScreenSize"
+		body: [
+			"draw.GetScreenSize()"
+		]
+		description: "Get game resolution settings. returns: width, height"
+	"draw.CreateFont":
+		prefix: "draw.CreateFont"
+		body: [
+			"draw.CreateFont( name, height, weight )"
+		]
+		description: "Create font by name"
+	"draw.AddFontResource":
+		prefix: "draw.AddFontResource"
+		body: [
+			"draw.AddFontResource( ttf )"
+		]
+		description: "Add .ttf file data to available fonts."
+	"draw.SetFont":
+		prefix: "draw.SetFont"
+		body: [
+			"draw.SetFont( font )"
+		]
+		description: "Set current font for drawing. To be used with DrawText"
+	"draw.CreateTexture":
+		prefix: "draw.CreateTexture"
+		body: [
+			"draw.CreateTexture( rgba, width, height )"
+		]
+		description: "Create new texture"
+	"draw.UpdateTexture":
+		prefix: "draw.UpdateTexture"
+		body: [
+			"draw.UpdateTexture( texture, rgba )"
+		]
+		description: "Update existing texture with rgba data"
+	"draw.SetTexture":
+		prefix: "draw.SetTexture"
+		body: [
+			"draw.SetTexture( texture )"
+		]
+		description: "Set current drawing texture. To be used with shape drawing like DrawFilledRect"
+	"common.Time":
+		prefix: "common.Time"
+		body: [
+			"common.Time()"
+		]
+		description: "Time since cheat was loaded (in seconds, high precision)"
+	"common.DecodePNG":
+		prefix: "draw.DecodePNG"
+		body: [
+			"common.DecodePNG( pngdata )"
+		]
+		description: "returns: rgba, width, height"
+	"common.DecodeJPEG":
+		prefix: "draw.DecodeJPEG"
+		body: [
+			"common.DecodePNG( jpegdata )"
+		]
+		description: "returns: rgba, width, height"
+	"common.RasterizeSVG":
+		prefix: "draw.RasterizeSVG"
+		body: [
+			"common.RasterizeSVG( svgdata, scale )"
+		]
+		description: "returns: rgba, width, height"
+	"gui.GetValue":
+		prefix: "gui.GetValue"
+		body: [
+			"gui.GetValue( varname )"
+		]
+		description: "returns the value of the gui variable."
+	"gui.SetValue":
+		prefix: "gui.SetValue"
+		body: [
+			"gui.SetValue( varname, value )"
+		]
+		description: "sets the value of the gui variable."
+	"gui.Reference":
+		prefix: "gui.Reference"
+		body: [
+			"gui.Reference( ... )"
+		]
+		description: "Used to reference the parent that will be used for adding gui objects."
+	"gui.Checkbox":
+		prefix: "gui.Checkbox"
+		body: [
+			"gui.Checkbox( parent, varname, name, value )"
+		]
+		description: "Gui checkbox."
+	"gui.Slider":
+		prefix: "gui.Slider"
+		body: [
+			"gui.Slider( parent, varname, name, value, min, max )"
+		]
+		description: "Gui slider."
+	"gui.Keybox":
+		prefix: "gui.Keybox"
+		body: [
+			"gui.Keybox( parent, varname, name, key )"
+		]
+		description: "Gui keybox."
+	"gui.Combobox":
+		prefix: "gui.Combobox"
+		body: [
+			"gui.Combobox( parent, varname, name, options... )"
+		]
+		description: "Gui keybox."
+	"gui.Editbox":
+		prefix: "gui.Editbox"
+		body: [
+			"gui.Editbox( parent, varname, value )"
+		]
+		description: "Gui editbox."
+	"gui.Text":
+		prefix: "gui.Text"
+		body: [
+			"gui.Editbox( parent, text )"
+		]
+		description: "Gui text."
+	"gui.Groupbox":
+		prefix: "gui.Groupbox"
+		body: [
+			"gui.Groupbox( parent, name, x, y, w, h )"
+		]
+		description: "Gui groupbox."
+	"gui.ColorPicker":
+		prefix: "gui.ColorPicker"
+		body: [
+			"gui.ColorPicker( parent, varname, name, r, g, b, a )"
+		]
+		description: "Gui colorpicker."
+	"gui.Window":
+		prefix: "gui.Window"
+		body: [
+			"gui.Window( varname, name, x, y, w, h )"
+		]
+		description: "Gui window."
+	"gui.Button":
+		prefix: "gui.Button"
+		body: [
+			"gui.Button( parent, name, callback )"
+		]
+		description: "Gui button."
+	"gui.Multibox":
+		prefix: "gui.Multibox"
+		body: [
+			"gui.Multibox( parent, name )"
+		]
+		description: "Gui multibox."
+	"gui.Command":
+		prefix: "gui.Command"
+		body: [
+			"gui.Command( command )"
+		]
+		description: "Gui command."
+	"gui.Custom":
+		prefix: "gui.Custom"
+		body: [
+			"gui.Custom( parent, varname, x, y, w, h, update( x1, y1, x2, y2, active ), write(), read( value ) )"
+		]
+		description: "Creates scripted GUI object with custom callbacks."
+	"gui.Tab":
+		prefix: "gui.Tab"
+		body: [
+			"gui.Tab( parent, varname, name )"
+		]
+		description: "GUI tab."
+	"input.GetMousePos":
+		prefix: "input.GetMousePos"
+		body: [
+			"input.GetMousePos()"
+		]
+		description: "returns: x and y"
+	"input.IsButtonDown":
+		prefix: "input.IsButtonDown"
+		body: [
+			"input.IsButtonDown( button )"
+		]
+		description: "returns: true or false"
+	"input.IsButtonPressed":
+		prefix: "input.IsButtonPressed"
+		body: [
+			"input.IsButtonPressed( button )"
+		]
+		description: "returns: true or false"
+	"input.IsButtonReleased":
+		prefix: "input.IsButtonReleased"
+		body: [
+			"input.IsButtonReleased( button )"
+		]
+		description: "returns: true or false"
+	"input.GetMouseWheelDelta":
+		prefix: "input.GetMouseWheelDelta"
+		body: [
+			"input.GetMouseWheelDelta()"
+		]
+		description: "Return accumulated mouse scroll value."
+	"engine.TraceLine":
+		prefix: "input.TraceLine"
+		body: [
+			"input.TraceLine( x1, y1, z1, x2, y2, z2, mask )"
+		]
+		description: "Traces line from point xyz1 to point xyz2, returns: contents, fraction, entity"
+	"engine.GetPointContents":
+		prefix: "input.GetPointContents"
+		body: [
+			"input.GetPointContents( x, y, z )"
+		]
+		description: "Checks if given point is inside wall, returns contents"
+	"engine.GetMapName":
+		prefix: "input.GetMapName"
+		body: [
+			"input.GetMapName()"
+		]
+		description: "returns: map name"
+	"engine.GetServerIP":
+		prefix: "input.GetServerIP"
+		body: [
+			"input.GetServerIP()"
+		]
+		description: "returns: server ip"
+	"file.Open":
+		prefix: "file.Open"
+		body: [
+			"file.Open( filename, mode)"
+		]
+		description: "modes: w (write), r (read) and a (append)"
+	"file.Delete":
+		prefix: "file.Delete"
+		body: [
+			"file.Delete( filename )"
+		]
+		description: "Deletes the file."
+	"file.Enumerate":
+		prefix: "file.Enumerate"
+		body: [
+			"file.Enumerate( callback( filename ) )"
+		]
+		description: "Enumerate all filenames in cheat directory."
+	"http.Get":
+		prefix: "http.Get"
+		body: [
+			"http.Get( url, callback:optional )"
+		]
+		description: "Returns webpage body at given url. Second argument is optional."
+	"vector.Add":
+		prefix: "vector.Add"
+		body: [
+			"vector.Add( {x,y,z}, {x,y,z} )"
+		]
+		description: "Adds two vectors together."
+	"vector.Subtract":
+		prefix: "vector.Subtract"
+		body: [
+			"vector.Subtract( {x,y,z}, {x,y,z} )"
+		]
+		description: "Subtracts two vectors together."
+	"vector.Multiply":
+		prefix: "vector.Multiply"
+		body: [
+			"vector.Multiply( {x,y,z}, m )"
+		]
+		description: "Multiply one vector."
+	"vector.Divide":
+		prefix: "vector.Divide"
+		body: [
+			"vector.Divide( {x,y,z}, d )"
+		]
+		description: "Divide one vector."
+	"vector.Length":
+		prefix: "vector.Length"
+		body: [
+			"vector.Length( {x,y,z} )"
+		]
+		description: "Length of one vector."
+	"vector.LengthSqr":
+		prefix: "vector.LengthSqr"
+		body: [
+			"vector.LengthSqr( {x,y,z} )"
+		]
+		description: "Length (Squared) of one vector."
+	"vector.Distance":
+		prefix: "vector.Distance"
+		body: [
+			"vector.Distance( {x,y,z}, {x,y,z} )"
+		]
+		description: "Distance between two vectors."
+	"vector.Normalize":
+		prefix: "vector.Normalize"
+		body: [
+			"vector.Normalize( {x,y,z} )"
+		]
+		description: "hypotenuse time!"
+	"vector.Angles":
+		prefix: "vector.Angles"
+		body: [
+			"vector.Angles( {pitch,yaw,roll} )"
+		]
+		description: "obtuse rubber goose green snake chocalate cake!."
+	"vector.AngleForward":
+		prefix: "vector.AngleForward"
+		body: [
+			"vector.AngleForward( {pitch,yaw,roll} )"
+		]
+		description: "obtuse rubber goose green snake chocalate cake!."
+	"vector.AngleRight":
+		prefix: "vector.AngleRight"
+		body: [
+			"vector.AngleRight( {pitch,yaw,roll} )"
+		]
+		description: "obtuse rubber goose green snake chocalate cake!."
+	"vector.AngleUp":
+		prefix: "vector.AngleUp"
+		body: [
+			"vector.AngleUp( {pitch,yaw,roll} )"
+		]
+		description: "obtuse rubber goose green snake chocalate cake!."
+	"vector.AngleNormalize":
+		prefix: "vector.AngleNormalize"
+		body: [
+			"vector.AngleNormalize( {pitch,yaw,roll} )"
+		]
+		description: "obtuse rubber goose green snake chocalate cake!."
+	"network.Socket":
+		prefix: "network.Socket"
+		body: [
+			"network.Socket( type )"
+		]
+		description: "Creates new socket, currently only type UDP is supported."
+	"network.GetAddrInfo":
+		prefix: "network.GetAddrInfo"
+		body: [
+			"network.GetAddrInfo( hostname )"
+		]
+		description: "Resolves hostname to IP."
+	"network.GetNameInfo":
+		prefix: "network.GetNameInfo"
+		body: [
+			"network.GetNameInfo( address )"
+		]
+		description: "Resolves IP to hostname."
+	"materials.Find":
+		prefix: "materials.Find"
+		body: [
+			"materials.Find( name )"
+		]
+		description: "Find material by name."
+	"materials.Enumerate":
+		prefix: "materials.Enumerate"
+		body: [
+			"materials.Enumerate( callback( mat ) )"
+		]
+		description: "Enumerate all loaded materials."
+	"materials.Create":
+		prefix: "materials.Create"
+		body: [
+			"materials.Create( name, vmt, type )"
+		]
+		description: "Create custom material following the Valve Material Type syntax."
+	"panorama.RunScript":
+		prefix: "panorama.RunScript"
+		body: [
+			"panorama.RunScript( js )"
+		]
+		description: "Run javascript in the context of CSGO panorama UI."
